@@ -27,7 +27,12 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// fb=new FaceBook("117119991727139",MainActivity.this);
+      //for posting into facebook please send the app_id and data and application context respectively as parameters
+      
+	 fb=new FaceBook("117119991727139",review,MainActivity.this);
+    
+    //for posting into twitter please send the application context,consumer key, secret key,callbackurl,twitterauthkey,twittersecretauthkey and data respectively as parameters
+    
 		TWEET_AUTH_Key = "498749982-2XbXBR1JwNUbU7khWPw6Y9i0pUNTmo7oDfspI5hk";
 		TWEET_AUTH_SECRET_Key = "NIYKNoTzNYTheNsHO4x802EO0GSfl4fvZ2KN0QAvaww";
 		mTwitter = new TwitterPost(MainActivity.this, "64SgnF2ok9apOyDcdO0Uw",
