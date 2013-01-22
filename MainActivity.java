@@ -27,9 +27,9 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-      //for posting into facebook please send the app_id and data and application context respectively as parameters
+      //for posting into facebook please send the app_id and data,title,link,icon link and application context respectively as parameters
       
-	 fb=new FaceBook("117119991727139",review,MainActivity.this);
+	 fb=new FaceBook("117119991727139",review,title,"www.google.com","http://mojoimage.com/free-image-hosting-11/403157x57.png",MainActivity.this);
     
     //for posting into twitter please send the application context,consumer key, secret key,callbackurl,twitterauthkey,twittersecretauthkey and data respectively as parameters
     
