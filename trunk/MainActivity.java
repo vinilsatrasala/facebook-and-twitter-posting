@@ -1,19 +1,12 @@
 package com.example.samplesocialshareproject;
 
 import com.rikt.and.social.share.fb.FaceBook;
-//import com.rikt.and.social.share.twitter.TwitterApp;
-//import com.rikt.and.social.share.twitter.TwitterApp.TwDialogListener;
+import com.rikt.and.social.share.fscheckin.FourSquareCheckin;
 import com.rikt.and.social.share.twitter.TwitterPost;
-
 import android.os.Bundle;
-//import android.os.Handler;
-//import android.os.Message;
-//import android.widget.Toast;
+import android.view.View;
 import android.app.Activity;
-//import android.app.AlertDialog;
-import android.content.Context;
-
-//import android.content.DialogInterface;
+import android.content.Context
 
 public class MainActivity extends Activity {
 	FaceBook fb;
@@ -22,6 +15,7 @@ public class MainActivity extends Activity {
 	static String TWEET_AUTH_Key, TWEET_AUTH_SECRET_Key;
 	Context ct;
 	String review = "twiiter";
+   FourSquareCheckin fschckin;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +32,12 @@ public class MainActivity extends Activity {
 		mTwitter = new TwitterPost(MainActivity.this, "64SgnF2ok9apOyDcdO0Uw",
 				"HMTI3FbTQsS7TpXOBvCC5cpO4YOW7XEAcj9BHyks9K4",
 				"twitterapp://connect", TWEET_AUTH_Key, TWEET_AUTH_SECRET_Key,review);
+            
+    // for foursquare checkin you need to pass application context, client id, clientsecret key.        
+            
+    fschckin = new FourSquareCheckin(MainActivity.this,
+				"OGCPZDVYJY12K25K1V3GE3FCTUV4COXPOHCUHNBFWJKKBRYR",
+				"MTPOS0E0GAJVWEK2YGP0ANRXYDLFWBWUHHHUJB3KPKTFJME5");
 		
 	}
 
