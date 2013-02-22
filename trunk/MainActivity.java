@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 	Context ct;
 	String review = "twiiter";
    FourSquareCheckin fschckin;
+   LinkedInLogin lk;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,11 @@ public class MainActivity extends Activity {
     fschckin = new FourSquareCheckin(MainActivity.this,
 				"OGCPZDVYJY12K25K1V3GE3FCTUV4COXPOHCUHNBFWJKKBRYR",
 				"MTPOS0E0GAJVWEK2YGP0ANRXYDLFWBWUHHHUJB3KPKTFJME5");
+            
+            // for linkedIn posting you need to pass application context, client id, clientsecret key, message you want to post.        
+            
+   lk = new LinkedInLogin(MainActivity.this, "3onys4p8y8ke",
+				"hK0t4LkCkj1vnjC1", "message");
 		
 	}
 
