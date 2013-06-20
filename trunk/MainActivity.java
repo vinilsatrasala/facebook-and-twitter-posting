@@ -9,7 +9,7 @@ import android.app.Activity;
 import android.content.Context
 
 public class MainActivity extends Activity {
-	FaceBook fb;
+	FaceBookShare fb;
 	TwitterPost mTwitter;
 	String username = "";
 	static String TWEET_AUTH_Key, TWEET_AUTH_SECRET_Key;
@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
       //for posting into facebook please send the app_id and message,title,link,icon link,description and application context respectively as parameters
       
-	fb = new FaceBook("117119991727139", "message","title","www.google.com","http://mojoimage.com/free-image-hosting-11/403157x57.png",review,MainActivity.this);
+	fb = new FaceBookShare ("117119991727139", "message","title","www.google.com","http://mojoimage.com/free-image-hosting-11/403157x57.png",review,MainActivity.this);
 
     
     //for posting into twitter please send the application context,consumer key, secret key,callbackurl,twitterauthkey,twittersecretauthkey and data respectively as parameters
