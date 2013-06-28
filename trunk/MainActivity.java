@@ -22,10 +22,15 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-      //for posting into facebook please send the app_id and message,title,link,icon link,description and application context respectively as parameters
+      //for logging into facebook please send the app_id and application context respectively as parameters
       
-	fb = new FaceBookShare ("117119991727139", "message","title","www.google.com","http://mojoimage.com/free-image-hosting-11/403157x57.png",review,MainActivity.this);
-
+	fb =new FaceBookShare("673959232621063", MainActivity.this);
+   //for posting into facebook please send the message,title,link,icon link,description respectively as parameters
+fb.postToFacebook("message", "title", "www.google.com",
+				"http://mojoimage.com/free-image-hosting-11/403157x57.png",
+				review);
+            //for inviting friends in facebook, pass message to invite friends as a parameter
+fb.inviteFaceBookFriends("Hi Friends check this cool stuff");
     
     //for posting into twitter please send the application context,consumer key, secret key,callbackurl,twitterauthkey,twittersecretauthkey and data respectively as parameters
     
